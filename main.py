@@ -1,6 +1,4 @@
-import discord
 import json
-import os
 
 import lolbuildutils
 import objects.champions as champion
