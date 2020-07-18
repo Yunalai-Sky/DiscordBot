@@ -5,9 +5,10 @@ from bs4 import BeautifulSoup
 
 def getlanguage(args):
     for x in args:
-        if x.lower() == 'fr' or x.lower() == '_fr':
+        y = x.replace('_', '')
+        if y.lower() == 'fr':
             return True
-        elif x.lower() == 'en' or x.lower() == '_en':
+        elif y.lower() == 'en':
             return False
     return 'nonegiven'
 

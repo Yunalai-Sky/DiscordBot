@@ -68,4 +68,13 @@ async def lolbuild(ctx, *args):
 
     await ctx.send(tosend)
 
+
+@bot.command(name='translate', aliases=['traduire'])
+async def translate(ctx, *args):
+    srclang = args[0]
+    destlang = args[1]
+
+    message = ' '.join(args[2:len(args)])
+    await ctx.send(googleapi.translate(message, srclang, destlang))
+
 bot.run(token)

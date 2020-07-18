@@ -15,3 +15,9 @@ def translateToFr(textlst):
 
 def gettext(googleresponse):
     return googleresponse.text
+
+
+def translate(message, srclang, destlang):
+    translator = Translator()
+
+    return translator.translate(message, src=srclang, dest=destlang).text
